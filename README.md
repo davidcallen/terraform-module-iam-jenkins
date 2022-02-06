@@ -1,6 +1,10 @@
-# iam-glass
+# iam-jenkins
 
-Terraform module for creating IAM Role and Profile for attaching to GLASS EC2 instances to give access to :
-* Cloudwatch logging and metrics
-* Check AutoScalingGroup for number of instances so can delay mounting EFS until no instances using it.
-* Check for matching GLASS instances by Hazelcast Discovery to join to its Cluster. 
+Terraform module for creating IAM Role and Profile for attaching to Jenkins EC2 instances to give access to :
+1) EC2 instance create/start/stop/...
+2) Jenkins Controller get config files from S3
+3) Cloudwatch logging and metrics
+4) Check AutoScalingGroup for number of instances so can delay mounting EFS until no instances using it.
+5) Send SNS messages for alerting
+6) Send Update on instance health to the ASG
+7) Get secrets for user passwords
