@@ -200,8 +200,8 @@ resource "aws_iam_policy" "jenkins-controller-get-secrets" {
     Version = "2012-10-17"
     Statement = [
       {
-        Sid       = "GetSecretsForJenkins"
-        Effect    = "Allow"
+        Sid    = "GetSecretsForJenkins"
+        Effect = "Allow"
         Action = [
           "secretsmanager:GetSecretValue"
         ]
