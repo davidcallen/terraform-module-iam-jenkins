@@ -32,7 +32,7 @@ EOF
 
 # 1) Register DNS record to Route53 for our ec2 host
 resource "aws_iam_policy" "route53" {
-  name        = "${var.resource_name_prefix}-nexus-route53"
+  name        = "${var.resource_name_prefix}-jenkins-controller-route53"
   description = "RegisterDNSwithRoute53"
   policy      = <<EOF
 {
